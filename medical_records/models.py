@@ -6,8 +6,8 @@ from appointment.models import Appointment
 # Create your models here.
 class MedicalRecord(models.Model):
     patient = models.ForeignKey(PatientProfile, on_delete=models.CASCADE, related_name="medical_record")
-    doctor = models.ForeignKey(Doctor, on_delete=models.SET_NULL, related_name="patient_record")
-    appointment = models.ForeignKey(Appointment, on_delete=models.SET_NULL)
+    doctor = models.ForeignKey(Doctor, on_delete=models.SET_NULL, related_name="patient_record", blank=True, null=True)
+    appointment = models.ForeignKey(Appointment, on_delete=models.SET_NULL, blank=True, null=True)
     visit_date = models.DateTimeField()
     symptoms = models.TextField()
     diagnosis = models.TextField()

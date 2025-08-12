@@ -26,6 +26,7 @@ class User(AbstractUser):
     gender = models.CharField(max_length=25, choices=gender_choices)
     
     USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
 
     @property
     def get_age(self):
