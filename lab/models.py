@@ -48,4 +48,14 @@ class LabTest(models.Model):
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default="Pending")
     result = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    completed_at = models.DateTimeField(auto_now=True)
+    completed_at = models.DateTimeField(blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        from django.utils.timezone import now
+        if self.status == "Completed" and not self.completed_at:
+            self.completed_at = now()
+        super().save(*args, **kwargs)
+
+
+    def __str__(self):
+        return f"{self.test_name} for {self.patient.full_name} - {self.status}"
