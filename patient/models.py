@@ -1,10 +1,8 @@
 from django.db import models
-from core.models import Hospital
 from datetime import date
 
 # Create your models here.
 class PatientProfile(models.Model):
-    hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE, related_name="patients")
     gender_choices = (
         ("Male", "Male"),
         ("Female", "Female"),
