@@ -28,8 +28,8 @@ class Doctor(models.Model):
     gender = models.CharField(max_length=255, choices=gender_choices)
     phone = models.CharField(max_length=20)
     address = models.TextField()
-    created_at = models.DateTimeField(auto_now=True)
-    updated_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return "Dr. " + self.user.first_name + " - " + self.specialty
@@ -50,8 +50,8 @@ class Laboratory_Scientist(models.Model):
     gender = models.CharField(max_length=255, choices=gender_choices)
     phone = models.CharField(max_length=20)
     address = models.TextField()
-    created_at = models.DateTimeField(auto_now=True)
-    updated_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return "Lab. Scientist " + self.user.first_name + " - " + self.specialty
@@ -72,8 +72,8 @@ class Nurse(models.Model):
     gender = models.CharField(max_length=255, choices=gender_choices)
     phone = models.CharField(max_length=20)
     address = models.TextField()
-    created_at = models.DateTimeField(auto_now=True)
-    updated_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return "Nurse " + self.user.first_name + " - " + self.specialty
