@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'patient',
     'lab',
     'medical_records',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -160,7 +161,7 @@ SIMPLE_JWT = {
 
 # Spectacular Settings (API docs)
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Alpha API',
+    'TITLE': 'Hospital Mangement System',
     'DESCRIPTION': 'Still in development',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
