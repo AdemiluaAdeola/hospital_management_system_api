@@ -10,7 +10,7 @@ class PatientViewSet(viewsets.ModelViewSet):
     queryset = PatientProfile.objects.all()
     serializer_class = PatientSerializer
     permission_classes = [permissions.AllowAny]
-    lookup_field = 'pk'
+    lookup_field = 'id'
 
 router = routers.DefaultRouter()
 router.register(r'patients', PatientViewSet, basename='patient')
