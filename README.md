@@ -27,7 +27,7 @@
 HMS/
 ├─ backend/                 # Django + DRF project
 │  ├─ manage.py
-│  ├─ core/                 # settings, urls, ASGI/WSGI, utils
+│  ├─ backend/                 # settings, urls, ASGI/WSGI, utils
 │  ├─ apps/
 │  │  ├─ accounts/          # users, roles, auth, audit
 │  │  ├─ patients/          # demographics, contacts, kin
