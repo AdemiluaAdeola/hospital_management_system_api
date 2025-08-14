@@ -6,6 +6,7 @@ from core.models import *
 from core.serializer import *
 from appointment.views import AppointmentViewSet
 from lab.views import LabTestViewSet
+from patient.views import PatientViewSet
 
 # Create your views here.
 class DoctorViewSet(viewsets.ModelViewSet):
@@ -32,3 +33,4 @@ router.register(r'nurse', NurseViewSet, basename='nurse')
 router.register(r'lab', LabViewSet, basename='lab')
 router.register(r'appointment', AppointmentViewSet, basename='appointment')
 router.register(r'test', LabTestViewSet, basename='test')
+router.register(r'patients', PatientViewSet, basename='patient')
