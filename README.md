@@ -5,7 +5,6 @@
 <p align="center">
   <img alt="HMS" src="https://img.shields.io/badge/Django-4.2-green">
   <img alt="DRF" src="https://img.shields.io/badge/DRF-3.14-red">
-  <img alt="React" src="https://img.shields.io/badge/React-18-blue">
   <img alt="License" src="https://img.shields.io/badge/License-MIT-black">
 </p>
 
