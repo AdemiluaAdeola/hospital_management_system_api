@@ -23,7 +23,7 @@ class NurseViewSet(viewsets.ModelViewSet):
 
 class LabViewSet(viewsets.ModelViewSet):
     queryset = Laboratory_Scientist.objects.all()
-    serializer_class = LabSerializer
+    serializer_class = LaboratoryScientistSerializer
     permission_classes = [permissions.AllowAny]
     lookup_field = 'pk'
 
